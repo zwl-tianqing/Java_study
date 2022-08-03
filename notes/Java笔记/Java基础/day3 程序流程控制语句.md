@@ -110,6 +110,8 @@
 > 
 > **switch case 语句**
 > 
+> > switch(表达式)中表达式的值<font color='red'>必须</font>是下述几种类型之一：<font color='red'>byte，short，char，int，枚举 (jdk 5.0)，String (jdk 7.0)</font>
+> 
 > ```java
 > //判断星期几 不在[1,7]之内 输出不知道
 > int i = 4;
