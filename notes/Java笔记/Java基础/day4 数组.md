@@ -111,3 +111,39 @@
 > int[]x,y[];//x是一个一维数组，y是一个二维数组。
 > //java中多为数组不必都是规则矩阵
 > ```
+
+### 3、Array 工具类的使用
+
+> java.util.Arrays类是操作数据类的工具类，包含了用来操作数组（比如排序和搜索）的各种方法
+
+| 方法名                              | 作用                             |
+| -------------------------------- | ------------------------------ |
+| boolean equals(int[] a,int[] b)  | 判断两个数组是否相等                     |
+| String toString(int a)           | 输出数组信息                         |
+| void fill(int a[],int val)       | 将指定值val填充到数组，数组中所有的元素的值都会变成val |
+| void sort(int[] a)               | 对数组进行排序                        |
+| int binarySearch(int[]a,int key) | 对排序后的数组进行二分查找方法检索指定值           |
+
+```java
+import java.util.Arrays;
+
+/**
+ * @author long
+ * @create 2022-08-03 15:29
+ * 测试数组方法工具类
+ */
+public class ArraysTest {
+    public static void main(String[] args) {
+        // 声明 int 类型数组并静态初始化
+        int[] nums = new int[]{2,34,-34,45,12,34,57};
+        // 调用数组工具类方法，排序方法
+        Arrays.sort(nums);
+        // 测试排序结果,调用toString方法打印数组信息
+        System.out.println(Arrays.toString(nums));
+        // 将指定值填充到数组，数组中所有的元素都会变成该值
+        Arrays.fill(nums,23);
+        // 打印数组信息
+        System.out.println(Arrays.toString(nums));
+    }
+}
+```
